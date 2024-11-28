@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(120deg, #2a5298, #1e3c72); /* Gradient background */
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+canvas {
+  display: block;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.content p {
+  font-size: 1.2rem;
+}
+form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+button {
+  background: #2a5298;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

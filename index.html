@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BM Xpress</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #2a5298, #1e3c72);
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      color: #333;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      text-align: center;
+      color: #2a5298;
+    }
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    button {
+      background: #2a5298;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #1e3c72;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BM Xpress</h1>
+  <p>Your trusted last-mile delivery partner</p>
+</header>
+
+<section id="track-awb">
+  <h2>Track Your Package</h2>
+  <input type="text" id="awb" placeholder="Enter your AWB Number">
+  <button onclick="trackAWB()">Track</button>
+  <p id="track-result" style="margin-top: 20px; text-align: center;"></p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form action="#" method="POST">
+    <input type="text" id="name" name="name" required placeholder="Enter your name">
+    <input type="email" id="email" name="email" required placeholder="Enter your email">
+    <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="partner">
+  <h2>Become a Delivery Partner</h2>
+  <p>Join BM Xpress and grow your career in logistics.</p>
+  <button onclick="alert('Thank you for your interest!')">Apply Now</button>
+</section>
+
+<footer>
+  &copy; 2024 BM Xpress | All Rights Reserved
+</footer>
+
+<script>
+  function trackAWB() {
+    const awb = document.getElementById('awb').value;
+    const result = document.getElementById('track-result');
+    if (awb) {
+      result.innerText = `Tracking AWB: ${awb} - Status: In Transit`;
+    } else {
+      result.innerText = 'Please enter a valid AWB number.';
+    }
+  }
+</script>
+
+</body>
+</html>
